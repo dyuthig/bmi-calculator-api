@@ -77,9 +77,9 @@ def bmi(age, months, totalweight, heightfeet, heightinches, decimalheight, sex):
         else:
           break   
       if sex == "female".lower() or sex == "f".lower():
-        girlbmi(age, BMI, months)
+        status = girlbmi(age, BMI, months)
       if sex == "male".lower() or sex== "m".lower():
-        boybmi(age, BMI, months)
+        status = boybmi(age, BMI, months)
     elif age >= 20:
       if BMI < 18.5:
         status = ("Underweight")
