@@ -46,7 +46,7 @@ def girlbmi(age, BMI, months):
 
 
 
-def bmi(age, months, heightfeet, heightinches, decimalheight, sex):
+def bmi(age, months, totalweight, heightfeet, heightinches, decimalheight, sex):
     validmonths = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     totalheight = heightfeet * 12
     totalheight = totalheight + heightinches + decimalheight
@@ -96,9 +96,9 @@ def bmi(age, months, heightfeet, heightinches, decimalheight, sex):
     }
 
 
-@app.route('/<age>/<months>/<heightfeet>/<heightinches>/<decimalheight>/<sex>')
-def home(age,months,heightfeet,heightinches,decimalheight,sex):
-    return bmi(age, months, heightfeet,heightinches,decimalheight,sex)
+@app.route('/<age>/<months>/<totalweight>/<heightfeet>/<heightinches>/<decimalheight>/<sex>')
+def home(age,months, totalweight, heightfeet,heightinches,decimalheight,sex):
+    return bmi(age, months, totalweight, heightfeet,heightinches,decimalheight,sex)
 
 @app.route('/')
 def about():
