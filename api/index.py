@@ -52,7 +52,6 @@ def bmi(age, months, totalweight, heightfeet, heightinches, decimalheight, sex):
     totalheight = totalheight + heightinches + decimalheight
     BMI = totalweight / (totalheight**2) * 703
     BMI = round(BMI, 1)
-    months = "N/A"
     if age < 20:
       while True:
         if months not in validmonths:
