@@ -101,4 +101,4 @@ def home(age,months, totalweight, heightfeet,heightinches,decimalheight,sex):
 
 @app.route('/')
 def about():
-    return "template: /<age>/<months>/<totalweight>/<heightfeet>/<heightinches>/<decimalheight>/<sex>"
+    return "template: /\<age>/\<months>/\<totalweight>/\<heightfeet>/\<heightinches>/\<decimalheight>/\<sex>"
