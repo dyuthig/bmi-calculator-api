@@ -70,7 +70,7 @@ def bmi(age, months, totalweight, heightfeet, heightinches, decimalheight, sex):
       else:
         age = age + 1
         months = 0
-      sexlist=["female", "f", "male", "m"]
+      sexlist=["female", "f", "male", "m","F","M"]
       
       while True:
         if sex not in sexlist:
@@ -79,9 +79,9 @@ def bmi(age, months, totalweight, heightfeet, heightinches, decimalheight, sex):
           }
         else:
           break   
-      if sex == "female".lower() or sex == "f".lower():
+      if sex == "female".lower() or sex.lower() == "f":
         status = girlbmi(age, BMI, months)
-      if sex == "male".lower() or sex== "m".lower():
+      if sex == "male".lower() or sex.lower()== "m":
         status = boybmi(age, BMI, months)
     elif age >= 20:
       if BMI < 18.5:
