@@ -100,7 +100,7 @@ def bmi(age, months, totalweight, heightfeet, heightinches, decimalheight, sex):
 
 @app.route('/<age>/<months>/<totalweight>/<heightfeet>/<heightinches>/<decimalheight>/<sex>')
 def home(age,months, totalweight, heightfeet,heightinches,decimalheight,sex):
-    return bmi(int(age), int(months), int(totalweight), int(heightfeet),int(heightinches),float(decimalheight),(sex))
+    return bmi(int(age), int(months), float(totalweight), int(heightfeet),int(heightinches),float(decimalheight),(sex))
 
 @app.route('/')
 def about():
